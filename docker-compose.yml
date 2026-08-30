@@ -1,0 +1,15 @@
+services:
+  cms:
+    build: .
+    container_name: marsho-cms
+    restart: unless-stopped
+    ports:
+      - "8091:5177"
+    environment:
+      ADMIN_USER: admin
+      # Hash scrypt — générer avec : node server/hash-password.mjs "mot-de-passe"
+      ADMIN_PASS_HASH: ${ADMIN_PASS_HASH}
+      DATA_FILE: /storage/data.json
+      UPLOADS_DIR: /storage/uploads
+    volumes:
+      - ./storage:/storage

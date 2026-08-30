@@ -1,0 +1,9 @@
+node_modules
+storage
+server/uploads
+server/data.json
+server/data.backup-*.json
+src
+public
+index.html
+vite.config.js

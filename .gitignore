@@ -1,0 +1,8 @@
+node_modules
+dist
+storage
+server/uploads
+server/data.json
+server/data.backup-*.json
+server/backups
+.env
